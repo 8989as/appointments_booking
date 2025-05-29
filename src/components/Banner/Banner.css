@@ -3,6 +3,7 @@
     background: #F3F0F1;
     border-radius: 41px;
     position: relative;
+    font-family: 'Genos', sans-serif; /* Apply Genos font to the banner content */
   }
   
   .banner-title {
