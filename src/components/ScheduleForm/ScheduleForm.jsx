@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import Swal from 'sweetalert2';
 import './ScheduleForm.css';
 
 const ScheduleForm = () => {
@@ -20,9 +21,29 @@ const ScheduleForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form Data:', formData);
-    // Example: alert('Form submitted! Check the console.');
+    localStorage.setItem('scheduleFormData', JSON.stringify(formData));
+        Swal.fire({
+      title: 'Success!',
+      text: 'Your information has been saved.',
+      icon: 'success',
+      confirmButtonText: 'Schedule Meeting'
+    }).then(() => {
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: 'https://app.usemotion.com/meet/moataz-kotb/internal'
+        });
+      } else {
+        console.error('Calendly script not loaded');
+      }
+    });
+    setFormData({
+      name: '',
+      email: '',
+      phoneNumber: '',
+      businessField: '',
+      message: '',
+    });
+    e.target.reset();
   };
 
   return (
@@ -118,7 +139,6 @@ const ScheduleForm = () => {
               placeholder="Type Your Message"
               value={formData.message}
               onChange={handleChange}
-              required
             ></textarea>
           </div>
 
