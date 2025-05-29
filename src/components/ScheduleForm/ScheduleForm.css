@@ -7,110 +7,146 @@
 } */
 
 .schedule-form-container {
-  max-width: 817px; /* Original width from Figma, acts as max-width */
+  max-width: 817px;
+  /* Original width from Figma, acts as max-width */
   margin-left: auto;
   margin-right: auto;
   /* Gap between main sections was 68px, handled by Bootstrap margins or specific section gaps */
 }
 
 .schedule-header-section {
-  margin-bottom: 68px; /* Simulates the gap: 68 from Frame1686557494 to Frame 1 */
+  margin-bottom: 68px;
+  /* Simulates the gap: 68 from Frame1686557494 to Frame 1 */
 }
 
 .schedule-title {
   color: #2009AF;
-  font-family: 'Genos', sans-serif; /* Fallback to sans-serif */
+  font-family: 'Genos', sans-serif;
+  /* Fallback to sans-serif */
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 45px; /* 0.9 */
+  line-height: 45px;
+  /* 0.9 */
   letter-spacing: 5.50px;
   word-wrap: break-word;
-  margin-bottom: 32px; /* Gap from Title to Description */
+  margin-bottom: 32px;
+  /* Gap from Title to Description */
 }
 
 .schedule-description {
   color: #1B02A2;
-  font-family: 'Genos', sans-serif; /* Fallback to sans-serif */
+  font-family: 'Genos', sans-serif;
+  /* Fallback to sans-serif */
   font-size: 24px;
   font-weight: 400;
   text-transform: capitalize;
   word-wrap: break-word;
-  line-height: 1.4; /* Adjusted for better readability */
-  max-width: 700px; /* To prevent very long lines on wider screens within the container */
+  line-height: 1.4;
+  /* Adjusted for better readability */
+  max-width: 700px;
+  /* To prevent very long lines on wider screens within the container */
 }
 
 .arrow-container {
-  margin-top: 68px; /* Gap from Frame1 */
-  margin-bottom: 68px; /* Gap to Frame1686557493 */
+  margin-top: 68px;
+  /* Gap from Frame1 */
+  margin-bottom: 68px;
+  /* Gap to Frame1686557493 */
 }
 
 .form-section-title {
   color: #2009AF;
-  font-family: 'Genos', sans-serif; /* Fallback to sans-serif */
+  font-family: 'Genos', sans-serif;
+  /* Fallback to sans-serif */
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 45px; /* 0.9 */
+  line-height: 45px;
+  /* 0.9 */
   letter-spacing: 5.50px;
   word-wrap: break-word;
-  margin-bottom: 48px; /* Gap from "Fill the form" title to first form field group */
+  margin-bottom: 48px;
+  /* Gap from "Fill the form" title to first form field group */
 }
 
 .schedule-label {
-  display: block; /* Make label take full width */
+  display: block;
+  /* Make label take full width */
   text-align: center;
   color: #2009AF;
-  font-family: 'Genos', sans-serif; /* Fallback to sans-serif */
+  font-family: 'Genos', sans-serif;
+  /* Fallback to sans-serif */
   font-size: 36px;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 36px; /* 1 */
+  line-height: 36px;
+  /* 1 */
   word-wrap: break-word;
-  margin-bottom: 16px; /* Gap from label to input field */
+  margin-bottom: 16px;
+  /* Gap from label to input field */
 }
 
 .schedule-input {
   background: white;
   border-radius: 12px;
   outline: 1.50px #776FA6 solid;
-  outline-offset: -1.50px; /* This might not render consistently across browsers, border is more common */
-  border: 1.50px solid #776FA6; /* Alternative to outline for better compatibility */
-  padding: 20px 12px; /* paddingTop: 20, paddingBottom: 20, paddingLeft: 12, paddingRight: 12 */
-  font-family: 'Basic Sans', sans-serif; /* Fallback to sans-serif */
+  outline-offset: -1.50px;
+  /* This might not render consistently across browsers, border is more common */
+  border: 1.50px solid #776FA6;
+  /* Alternative to outline for better compatibility */
+  padding: 20px 12px;
+  /* paddingTop: 20, paddingBottom: 20, paddingLeft: 12, paddingRight: 12 */
+  font-family: 'Basic Sans', sans-serif;
+  /* Fallback to sans-serif */
   font-size: 18px;
   font-weight: 400;
-  line-height: 18px; /* 1 */
-  color: #333; /* Default text color, placeholder will be different */
+  line-height: 18px;
+  /* 1 */
+  color: #333;
+  /* Default text color, placeholder will be different */
 }
 
 .schedule-input::placeholder {
   color: #B8B6C4;
-  text-transform: capitalize; /* As per design for placeholder */
-  text-align: left; /* Figma showed center, but placeholders are usually left-aligned in inputs */
+  text-transform: capitalize;
+  /* As per design for placeholder */
+  text-align: left;
+  /* Figma showed center, but placeholders are usually left-aligned in inputs */
 }
 
 .schedule-input:focus {
-  border-color: #2009AF; /* Example focus color */
-  box-shadow: 0 0 0 0.25rem rgba(32, 9, 175, 0.25); /* Bootstrap-like focus */
-  outline: none; /* Remove default outline if custom border/box-shadow is used */
+  border-color: #2009AF;
+  /* Example focus color */
+  box-shadow: 0 0 0 0.25rem rgba(32, 9, 175, 0.25);
+  /* Bootstrap-like focus */
+  outline: none;
+  /* Remove default outline if custom border/box-shadow is used */
 }
 
 .schedule-textarea {
-  min-height: 129px; /* From design height: 129 for the text area input field */
+  min-height: 129px;
+  /* From design height: 129 for the text area input field */
 }
 
 .star-decoration {
   position: absolute;
-  z-index: -1; /* To be behind content if they overlap */
+  /* z-index: -1; */
+  /* To be behind content if they overlap */
 }
-.star-1 { left: -148px; top: -73px; }
-.star-2 { left: -224px; top: -55px; width: 92px; height: 92px; } /* SVG inside will scale if viewBox is set */
 
-/* Example submit button styling - customize as needed */
+.star-1 {
+  left: -148px;
+  top: -73px;
+}
+
+.star-2 {
+  left: -224px;
+  top: -55px;
+  width: 92px;
+  height: 92px;
+}
 .schedule-submit-btn {
-  background-color: #2009AF;
-  border-color: #2009AF;
   font-family: 'Genos', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -122,4 +158,13 @@
 .schedule-submit-btn:hover {
   background-color: #1B02A2;
   border-color: #1B02A2;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.svg-icon {
+  fill: currentColor;
 }

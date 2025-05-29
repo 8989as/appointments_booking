@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from "./components/navbar/Navbar"
 import "./App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -7,12 +8,18 @@ import Banner from "./components/Banner/Banner"
 import ScheduleForm from "./components/ScheduleForm/ScheduleForm"
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="App">
-      <Navbar />
-      <Banner />
-      <Carousel />
-      <ScheduleForm />
+    <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Banner darkMode={darkMode} />
+      <Carousel darkMode={darkMode} />
+      <ScheduleForm darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </div>
   )
 }

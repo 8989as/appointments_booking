@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { LightDarkToggle } from 'react-light-dark-toggle';
 import "./Navbar.css";
 
-const Navbar = () => {
-    const [darkMode, setDarkMode] = useState(false);
+const Navbar = ({ darkMode, toggleDarkMode }) => {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     const handleTogglerClick = () => {
@@ -60,7 +58,7 @@ const Navbar = () => {
                                     role="switch"
                                     id="darkModeSwitch"
                                     checked={darkMode}
-                                    onChange={() => setDarkMode(!darkMode)}
+                                    onChange={toggleDarkMode}
                                 />
                                 <label className="form-check-label" htmlFor="darkModeSwitch">
                                     {darkMode ? (
