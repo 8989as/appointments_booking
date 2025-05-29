@@ -192,7 +192,7 @@ const ScheduleForm = ({ darkMode }) => {
             <button
               type="submit"
               className={`btn ${darkMode ? 'btn-secondary' : 'btn-primary'} schedule-submit-btn`}>
-              Submit
+              Schedule Meeting
             </button>
           </div>
         </form>

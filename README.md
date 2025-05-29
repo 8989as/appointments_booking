@@ -63,39 +63,6 @@ http://localhost:5173
 4. Select your preferred time slot in the Calendly widget
 5. Confirm your appointment
 
-### Form Validation
-
-The form includes validation for:
-- Required fields
-- Email format
-- Phone number format
-
 ### Dark/Light Mode
 
 Toggle between dark and light mode using the switch in the navigation bar.
-
-## Building for Production
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory.
-
-## Preview Production Build
-
-To preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
