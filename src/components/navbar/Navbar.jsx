@@ -4,12 +4,17 @@ import "./Navbar.css";
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const handleTogglerClick = () => {
+        setIsNavOpen(!isNavOpen);
+    };
 
     return (
         <div className="navbar-container">
             <div className="navbar-background"></div>
             <nav
-                className={`navbar navbar-expand-lg custom-navbar ${darkMode ? "dark-mode" : "light-mode"
+                className={`navbar navbar-expand-lg custom-navbar ${darkMode ? "dark-mode" : "light-mode"}
                     }`}
             >
                 <div className="container-fluid custom-navbar-container">
@@ -24,13 +29,12 @@ const Navbar = () => {
                     <button
                         className="navbar-toggler"
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
+                        onClick={handleTogglerClick}
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <div className={`collapse navbar-collapse justify-content-between ${isNavOpen ? 'show' : ''}`} id="navbarNav">
                         <ul className="navbar-nav mx-auto custom-nav-links">
                             {["HOME", "ABOUT US", "CASE STUDIES", "SERVICES ▾", "BLOG", "CAREERS"].map(
                                 (label, i) => (
