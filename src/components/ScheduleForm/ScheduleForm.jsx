@@ -19,8 +19,34 @@ const ScheduleForm = ({ darkMode }) => {
     }));
   };
 
+  const validateForm = () => {
+    const { name, email, phoneNumber } = formData;
+
+    if (!name || name.length < 3 || !/^[a-zA-Z\s]+$/.test(name)) {
+      Swal.fire('Validation Error', 'Name must be at least 3 characters and letters only!.', 'error');
+      return false;
+    }
+
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      Swal.fire('Validation Error', 'Please enter a valid email.', 'error');
+      return false;
+    }
+
+    if (!phoneNumber || !/^[0-9]+$/.test(phoneNumber)) {
+      Swal.fire('Validation Error', 'Phone number must contain only digits.', 'error');
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     localStorage.setItem('scheduleFormData', JSON.stringify(formData));
     Swal.fire({
       title: 'Success!',
