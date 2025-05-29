@@ -16,8 +16,7 @@ A modern, responsive landing page built with React and Vite that allows users to
 - React.js
 - Vite
 - Bootstrap 5
-- Calendly API
-- SweetAlert2 for notifications
+- Calendly Widget
 
 ## Prerequisites
 
