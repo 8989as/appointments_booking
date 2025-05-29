@@ -1,10 +1,11 @@
 .custom-navbar {
-  border: 2px solid #0000ff;
+  border: 2px solid #2009AF;
   font-family: 'Archivo', sans-serif;
   font-weight: bold;
   font-size: 1.05rem;
   text-transform: uppercase;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding: 0px;
 }
 
 .logo-container {
@@ -16,7 +17,7 @@
 }
 
 .custom-nav-links .nav-link {
-  color: #0000ff;
+  color: #2009AF;
   padding: 0.75rem 1rem;
   position: relative;
   transition: color 0.3s;
@@ -44,14 +45,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: 1px solid #0000ff;
-  border-right: 1px solid #0000ff;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
 .contact-us {
-  color: #0000ff;
+  color: #2009AF;
 }
 
 .dark-mode {
@@ -71,10 +70,20 @@
 
 .light-mode {
   background-color: white;
-  color: #0000ff;
+  color: #2009AF;
 }
 
 .navbar-container {
   align-items: center;
   padding: 22px;
+}
+
+.custom-switch {
+  margin-right: 20px;
+  border-left: 2px solid #0f19d3;
+  border-right: 2px solid #0f19d3;
+  padding: 20px;
+}
+.logo-border {
+  border-right: 2px solid #0f19d3;
 }
