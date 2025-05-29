@@ -18,10 +18,22 @@ function App() {
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Banner darkMode={darkMode} />
-      <Carousel darkMode={darkMode} />
-      <ScheduleForm darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Footer darkMode={darkMode} />
+      <div className="container-fluid px-0">
+        <main className="min-vh-100">
+          <section className="py-5">
+            <Banner darkMode={darkMode} />
+          </section>
+          <section className="py-5">
+            <Carousel darkMode={darkMode} />
+          </section>
+          <section className="py-5">
+            <div className="container">
+              <ScheduleForm darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            </div>
+          </section>
+        </main>
+        <Footer darkMode={darkMode} />
+      </div>
     </div>
   )
 }
