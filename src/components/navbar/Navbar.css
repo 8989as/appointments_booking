@@ -1,0 +1,79 @@
+.custom-navbar {
+  border: 2px solid #0000ff;
+  font-weight: bold;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logo-container {
+  padding: 0.4rem 0.8rem;
+}
+
+.navbar-logo {
+  height: 45px;
+}
+
+.custom-nav-links .nav-link {
+  color: #0000ff;
+  padding: 0.75rem 1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.custom-nav-links .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: yellow;
+  transition: width 0.3s;
+}
+
+.custom-nav-links .nav-link:hover::after,
+.custom-nav-links .active-link::after {
+  width: 100%;
+}
+
+.theme-toggle {
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #0000ff;
+  border-right: 1px solid #0000ff;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.contact-us {
+  color: #0000ff;
+}
+
+.dark-mode {
+  background-color: #111 !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+.dark-mode .nav-link,
+.dark-mode .contact-us {
+  color: white !important;
+}
+
+.dark-mode .nav-link::after {
+  background-color: yellow;
+}
+
+.light-mode {
+  background-color: white;
+  color: #0000ff;
+}
+
+.navbar-container {
+  align-items: center;
+  padding: 22px;
+}
